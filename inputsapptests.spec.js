@@ -1,6 +1,6 @@
 import Inputspage from '../pageobjects/inputs.page';
 
-describe('Inputs App', () => {
+describe('My Inputs App', () => {
     beforeAll(async function(){
         console.log('I do before everything');
     });
@@ -23,10 +23,11 @@ describe('Inputs App', () => {
         console.log('second test');
         await expect(Inputspage.getSubTitle).toHaveTextContaining('Number');
     });
-    it('Add the value manually', async () => {
+    
+    it('Add a number manually', async () => {
         console.log('third test'),
-        await (Inputspage.includeNumberManually());
-        expect (InputsPage.getNumberTextBox).toHaveTextContaining('78');
+        await (Inputspage.addNumber());
+        expect (InputsPage.currentInput()).toHaveTextContaining('43');
     });
 });
 

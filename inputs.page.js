@@ -14,12 +14,13 @@ class Inputspage extends Page {
         return $('input[type=number]');
     }
 
-    setInpuntsValuebyIndex(index){
-        return this.getInputs.selectByIndex(index);
+    addNumber(){
+        const input = $('#content > div > div > div > input[type=number]');
+        return input.setValue("43");
     }
 
-    currentSelected(){
-        return $('#inputs option[selected="selected"]');
+    currentInput(){
+        return $('#content > div > div > div > input[type=number]');
     }
 }
 export default new Inputspage();
