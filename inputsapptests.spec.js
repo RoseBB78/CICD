@@ -23,7 +23,6 @@ describe('My Inputs App', () => {
         console.log('second test');
         await expect(Inputspage.getSubTitle).toHaveTextContaining('Number');
     });
-    
     it('Add a number manually', async () => {
         console.log('third test'),
         await (Inputspage.addNumber());
